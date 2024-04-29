@@ -372,15 +372,15 @@ template<>
 score_t Connect6<score_t>::evaluate() const {
     score_t score = 0;
     {
-        score += countAliveRen<5, false>(player_, ~opponent_) * 27;
-        score += countAliveRen<4, false>(player_, ~opponent_) * 27;
+        score += countAliveRen<5, false>(player_, ~opponent_) * 12;
+        score += countAliveRen<4, false>(player_, ~opponent_) * 12;
         score += countAliveRen<3, false>(player_, ~opponent_) * 9;
         score += countAliveRen<2, false>(player_, ~opponent_) * 3;
         score += countAliveRen<1, false>(player_, ~opponent_);
     }
     {
-        score -= countAliveRen<5, false>(opponent_, ~player_) * 81;
-        score -= countAliveRen<4, false>(opponent_, ~player_) * 81;
+        score -= countAliveRen<5, false>(opponent_, ~player_) * 36;
+        score -= countAliveRen<4, false>(opponent_, ~player_) * 36;
         score -= countAliveRen<3, false>(opponent_, ~player_) * 27;
         score -= countAliveRen<2, false>(opponent_, ~player_) * 9;
         score -= countAliveRen<1, false>(opponent_, ~player_) * 3;
